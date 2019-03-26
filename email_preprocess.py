@@ -1,8 +1,7 @@
 #!/usr/bin/python
 
-import pickle
-#import cPickle
-import pickle as cPickle
+import _pickle as pickle
+import _pickle as cPickle
 import numpy
 
 #from sklearn import cross_validation
@@ -28,6 +27,23 @@ def preprocess(words_file = "../tools/word_data_unix.pkl", authors_file="../tool
             -- training/testing labels
 
     """
+
+
+    ##Converting the word file from dos to Unix
+
+    original = "../tools/word_data.pkl"
+    destination = "../tools/word_data_unix.pkl"
+
+    content = ''
+    outsize = 0
+    with open(original, 'rb') as infile:
+        content = infile.read()
+        with open(destination, 'wb') as output:
+            for line in content.splitlines():
+                outsize += len(line) + 1
+                output.write(line + str.encode('\n'))
+
+    print("Done. Saved %s bytes." % (len(content)-outsize))
 
     ### the words (features) and authors (labels), already largely preprocessed
     ### this preprocessing will be repeated in the text learning mini-project

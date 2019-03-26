@@ -3,16 +3,15 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <SchemaVersion>2.0</SchemaVersion>
-    <ProjectGuid>{26ef9778-f176-447b-8fff-86a5f424a867}</ProjectGuid>
-    <ProjectHome>..\..\ud120-projects\naive_bayes\</ProjectHome>
+    <ProjectGuid>{ec22ed24-517a-49a6-a3c4-907c5a2d6b89}</ProjectGuid>
+    <ProjectHome />
     <StartupFile>nb_author_id.py</StartupFile>
-    <SearchPath>..\..\VKmachineLearning</SearchPath>
+    <SearchPath />
     <WorkingDirectory>.</WorkingDirectory>
     <OutputPath>.</OutputPath>
     <ProjectTypeGuids>{888888a0-9f3d-457c-b088-3a5042f75d52}</ProjectTypeGuids>
     <LaunchProvider>Standard Python launcher</LaunchProvider>
     <InterpreterId />
-    <Name>naive_bayes</Name>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)' == 'Debug'" />
   <PropertyGroup Condition="'$(Configuration)' == 'Release'" />
@@ -21,6 +20,8 @@
   </PropertyGroup>
   <ItemGroup>
     <Compile Include="email_preprocess.py" />
+    <Compile Include="nb_author_id.py" />
+    <Compile Include="startup.py" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)\Python Tools\Microsoft.PythonTools.targets" />
 </Project>
