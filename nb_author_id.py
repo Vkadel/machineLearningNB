@@ -31,10 +31,12 @@ print(features_test[0])
 
 #########################################################
 ### your code goes here ###
-gnb = GaussianNB()
-pred = gnb.fit(features_train, labels_train).predict(features_test)
-acc=accuracy_score(labels_test,pred)
-print(acc)
+loop=[0,1,2,3,4,5,6,7,8,9]
+for i in loop:
+    gnb = GaussianNB(var_smoothing=1e-7)
+    pred = gnb.fit(features_train, labels_train).predict(features_test)
+    acc=accuracy_score(labels_test,pred)
+    print("Accuracy for ",i,": ", acc)
 #########################################################
 
 
